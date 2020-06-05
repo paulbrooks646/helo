@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 
+
 export default class Nav extends Component {
     constructor() {
         super()
@@ -10,11 +11,16 @@ export default class Nav extends Component {
     }
 
     render() {
+        const navbar = this.props.location
+        if (navbar === "/") {
+      return (
+        <div></div>
+      )}
+    else {
         return (
-            <div>Nav</div>
+            <div><nav><button>Home</button><button>New Post</button><button>Logout</button></nav></div>
         )
-    }
+    }}}
 
 
 
-}

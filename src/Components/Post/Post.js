@@ -5,13 +5,17 @@ export default class Post extends Component {
         super()
 
         this.state = {
-
+        title: "",
+        img: "",
+        content: "",
+        author: "",
+        authorPicture: ""
         }
     }
 
     render() {
         return (
-            <div>Post</div>
+            <div>Please Mr. Post Man</div>
         )
     }
 

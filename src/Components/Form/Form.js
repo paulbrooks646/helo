@@ -5,13 +5,15 @@ export default class Form extends Component {
         super()
 
         this.state = {
-
+        title: "",
+        img: "",
+        content: ""
         }
     }
 
     render() {
         return (
-            <div>Form</div>
+            <div>This is the greatest Form</div>
         )
     }
 

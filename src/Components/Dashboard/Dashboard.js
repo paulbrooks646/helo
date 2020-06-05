@@ -5,7 +5,9 @@ export default class Dashboard extends Component {
         super()
 
         this.state = {
-
+posts: [],
+search: "",
+userposts: true
         }
     }
 
