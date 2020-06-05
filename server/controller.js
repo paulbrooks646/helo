@@ -1,19 +1,23 @@
 module.exports = {
 
-    register: (req, res) => {
-        console.log("cow")
+    register: async (req, res) => {
+        const db = req.app.get('db')
+        const {email, password} = req.body
     },
-    login: (req, res) => {
-        console.log("cow")
+    login: async (req, res) => {
+        const db = req.app.get('db')
+        const {email, password} = req.body
     },
-    retrievePosts: (req, res) => {
-        console.log("cow")
+    retrievePosts: async (req, res) => {
+        const db = req.app.get('db')
     },
-    retrievePost: (req, res) => {
-        console.log("cow")
+    retrievePost: async (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.params
     },
-    newPost: (req, res) => {
-        console.log("cow")
+    newPost: async (req, res) => {
+        const db = req.app.get('db')
+        const {title, img, content, author_id} = req.body
     }
 
 }
