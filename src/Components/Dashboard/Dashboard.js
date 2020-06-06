@@ -13,7 +13,7 @@ userposts: true
 
     render() {
         return (
-            <div>Dashboard</div>
+            <div>Please Render the Dashboard</div>
         )
     }
 

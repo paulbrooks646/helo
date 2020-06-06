@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import {Link} from 'react-router-dom'
 
 
 export default class Nav extends Component {
@@ -18,7 +19,19 @@ export default class Nav extends Component {
       )}
     else {
         return (
-            <div><nav><button>Home</button><button>New Post</button><button>Logout</button></nav></div>
+            <div>
+                <nav>
+                    <Link to="dashboard">
+                        <button>Home</button>
+                    </Link>
+                    <Link to="/new">
+                        <button>New Post</button>
+                    </Link>
+                    <Link to="/">
+                        <button>Logout</button>
+                    </Link>
+                </nav>
+            </div>
         )
     }}}
 
