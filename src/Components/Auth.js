@@ -38,7 +38,6 @@ class Auth extends Component {
         
     render() {
         const {username, password} = this.state
-        console.log("COWABUNGA", this.props)
         return (
             <div>
                 <input

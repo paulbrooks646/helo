@@ -1,6 +1,7 @@
 import React, {Component} from "react"
+import {connect} from 'react-redux'
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
     constructor() {
         super()
 
@@ -13,10 +14,10 @@ userposts: true
 
     render() {
         return (
-            <div>Please Render the Dashboard</div>
+            <div>Welcome {this.props.user.username}</div>
         )
     }
-
-
-
 }
+
+const mapStateToProps = reduxState => reduxState
+export default connect(mapStateToProps)(Dashboard)

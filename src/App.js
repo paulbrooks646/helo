@@ -12,7 +12,6 @@ import {connect} from "react-redux"
 
 
 function App(props) {
-console.log("ayayay", props)
   return (
     <div className="App"><Nav/>{Routes}</div>
   )

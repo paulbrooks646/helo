@@ -51,6 +51,10 @@ module.exports = {
     newPost: async (req, res) => {
         const db = req.app.get('db')
         const {title, img, content, author_id} = req.body
+    },
+    logout: async (req, res) => {
+        req.session.destroy()
+        res.sendStatus(200)
     }
 
 }
