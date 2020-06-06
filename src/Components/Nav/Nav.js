@@ -1,8 +1,9 @@
 import React, {Component} from "react"
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 
-export default class Nav extends Component {
+
+class Nav extends Component {
     constructor() {
         super()
 
@@ -12,7 +13,7 @@ export default class Nav extends Component {
     }
 
     render() {
-        const navbar = this.props.location
+        const navbar = this.props.location.pathname
         if (navbar === "/") {
       return (
         <div></div>
@@ -34,6 +35,8 @@ export default class Nav extends Component {
             </div>
         )
     }}}
+
+    export default withRouter(Nav)
 
 
 

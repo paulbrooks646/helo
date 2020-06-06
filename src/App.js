@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 //import Dashboard from './Components/Dashboard/Dashboard';
 //import Form from './Components/Form/Form';
@@ -6,25 +6,17 @@ import './App.css';
 import Nav from './Components/Nav/Nav';
 //import Post from './Components/Post/Post'
 import Routes from './routes.js'
-import {withRouter} from "react-router-dom"
+//import {withRouter} from "react-router-dom"
+import {connect} from "react-redux"
 
 
 
-class App extends Component {
-constructor() {
-  super()
-
-  this.state = {
-
-  }
-}
-
-
-render() {
+function App(props) {
+console.log("ayayay", props)
   return (
-    <div className="App"><Nav location={this.props.location.pathname} />{Routes}</div>
+    <div className="App"><Nav/>{Routes}</div>
   )
-}
 };
 
-export default withRouter(App)
+const mapStateToProps = reduxState => reduxState
+export default connect(mapStateToProps)(App)

@@ -23,12 +23,18 @@ export default class Auth extends Component {
         const {username, password} = this.state
         axios.post('/api/auth/login', {username, password}).then( res => {this.props.history.push('/dashboard')}).catch( err => { alert('could not login')})
     }
+
+    register = (e) => {
+        e.preventDefault();
+        const {username, password} = this.state
+        axios.post('/api/auth/register', {username, password}).then( res => {this.props.history.push('/dashboard')}).catch( err => { alert('could not register')})
+    }
         
     render() {
         const {username, password} = this.state
         return (
             <div>
-                <form onSubmit={(e)=> this.login(e)}>
+                
                     
                     <input
                         type="text" 
@@ -44,11 +50,13 @@ export default class Auth extends Component {
                         onChange={e => this.changeHandler(e)}/>
                     <input
                         type="submit"
-                        value="Login"/>
+                        value="Login"
+                        onClick={(e) => this.login(e)}/>
                     <input
                         type="submit"
-                        value="Register"/>
-                </form>
+                        value="Register"
+                        onClick={(e) => this.register(e)}/>
+                
             </div>
         )
     }
