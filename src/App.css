@@ -1,4 +1,28 @@
 .App {
   text-align: center;
 }
+.authbackground {
+  background-image: linear-gradient(to right, #FF70A6, #E9FF70);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginbox {
+  background-image: linear-gradient(to right, #FF70A6, #E9FF70);
+  width: 600px;
+  height: 400px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5%;
+  box-shadow: 1px 1px 8px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.winky {
+  width: 150px;
+}
 

@@ -39,28 +39,30 @@ class Auth extends Component {
     render() {
         const {username, password} = this.state
         return (
-            <div>
-                <input
+            <div className="authbackground">
+                <div className="loginbox">
+                    <img className="winky" src="https://www.vippng.com/png/detail/285-2850586_wink-face-png-smiley-face-icon-black-and.png"/>
+                    <input
                         type="text" 
                         placeholder="username"
                         name="username"
                         value={username}
                         onChange={e => this.changeHandler(e)}/>
-                <input
+                    <input
                         type="password"
                         placeholder="password"
                         name="password"
                         value={password}
                         onChange={e => this.changeHandler(e)}/>
-                <input
+                    <input
                         type="submit"
                         value="Login"
                         onClick={(e) => this.login(e)}/>
-                <input
+                    <input
                         type="submit"
                         value="Register"
                         onClick={(e) => this.register(e)}/>
-                
+                </div>
             </div>
         )
     }
