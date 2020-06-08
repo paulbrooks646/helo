@@ -41,27 +41,44 @@ class Auth extends Component {
         return (
             <div className="authbackground">
                 <div className="loginbox">
-                    <img className="winky" src="https://www.vippng.com/png/detail/285-2850586_wink-face-png-smiley-face-icon-black-and.png"/>
-                    <input
-                        type="text" 
-                        placeholder="username"
-                        name="username"
-                        value={username}
-                        onChange={e => this.changeHandler(e)}/>
-                    <input
-                        type="password"
-                        placeholder="password"
-                        name="password"
-                        value={password}
-                        onChange={e => this.changeHandler(e)}/>
-                    <input
-                        type="submit"
-                        value="Login"
-                        onClick={(e) => this.login(e)}/>
-                    <input
-                        type="submit"
-                        value="Register"
-                        onClick={(e) => this.register(e)}/>
+                    <div className="head">
+                        <div classname="eyes">
+                            <div className="lefteye"></div>
+                            <div className="righteye"></div>
+                        </div>
+                        <div className="smile"></div>
+                    </div>
+                    <h1>Helo</h1>
+                    <div className="usernameInput">
+                        <label>Username:</label>
+                        <input
+                            type="text" 
+                            placeholder=""
+                            name="username"
+                            value={username}
+                            onChange={e => this.changeHandler(e)}/>
+                    </div>
+                    <div className="passwordInput">
+                        <label>Password:</label>
+                        <input
+                            type="password"
+                            placeholder=""
+                            name="password"
+                            value={password}
+                            onChange={e => this.changeHandler(e)}/>
+                    </div>
+                    <div className="buttons">
+                        <input
+                            className="loginButton"
+                            type="submit"
+                            value="Login"
+                            onClick={(e) => this.login(e)}/>
+                        <input
+                            className="registerButton"
+                            type="submit"
+                            value="Register"
+                            onClick={(e) => this.register(e)}/>
+                    </div>
                 </div>
             </div>
         )

@@ -15,6 +15,8 @@ class Nav extends Component {
         }
     }
 
+   
+
     logoutUser() {
         axios.delete('/api/logout').then(() => {
         this.props.logoutUser()
@@ -22,6 +24,7 @@ class Nav extends Component {
     
 
     render() {
+        console.log(this.props)
         const navbar = this.props.location.pathname
         if (navbar === "/") {
       return (
@@ -29,19 +32,21 @@ class Nav extends Component {
       )}
     else {
         return (
-            <div>
+            
                 <nav>
-                    <Link to="dashboard">
-                        <button>Home</button>
-                    </Link>
-                    <Link to="/new">
-                        <button>New Post</button>
-                    </Link>
-                    
-                        <button onClick={()=> this.logoutUser()}>Logout</button>
-                    
+                    <div className="navbarmain">
+                        <img className="profilepic" src="https://robohash.org/4H1.png?set=set1&size=150x150" alt=""/>
+                        <h4>Profile Name</h4>
+                        <Link to="dashboard">
+                            <button className="homebutton">Home</button>
+                        </Link>
+                        <Link to="/new">
+                            <button className="postbutton">New Post</button>
+                        </Link>
+                    </div>
+                    <img alt="" src="https://lh3.googleusercontent.com/proxy/Tta5QSCQyN271RnWyfKJRVOup3BSjpvo_DTTW3ek2o19yYA5cOLiwqwrfyKrz8g4C0Du-hFXz7UcVUHLJQqChdxAj-0eFVNSpFqTXeGBRSdhlZf0Yc8Q5hYzthw" className="logoutbutton" onClick={()=> this.logoutUser()}/>
                 </nav>
-            </div>
+            
         )
     }}}
     const mapStateToProps = reduxState => reduxState

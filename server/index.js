@@ -30,5 +30,6 @@ app.get('/api/posts/:userid', ctrl.retrievePosts)
 app.get('/api/post/:postid', ctrl.retrievePost)
 app.post('/api/post/:userid', ctrl.newPost)
 app.delete('/api/logout', ctrl.logout)
+app.get('/api/user', ctrl.getUser)
 
 

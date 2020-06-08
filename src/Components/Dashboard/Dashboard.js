@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {connect} from 'react-redux'
+import {getUser} from '../redux/reducer'
 
 class Dashboard extends Component {
     constructor() {
@@ -11,13 +12,16 @@ search: "",
 userposts: true
         }
     }
+    componentDidMount() {
+        this.props
+    }
 
     render() {
         return (
-            <div>Welcome {this.props.user.username}</div>
+            <div className="dashboard">Welcome {this.props.user.username}</div>
         )
     }
 }
 
 const mapStateToProps = reduxState => reduxState
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps, {getUser})(Dashboard)

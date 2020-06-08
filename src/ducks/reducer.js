@@ -1,3 +1,5 @@
+import axios from "axios"
+
 const initialState = {
     user: {},
     isLoggedIn : false
@@ -28,7 +30,8 @@ return {
     payload: initialState
 }
 }
-export function getUser(user) {
+export function getUser() {
+  const user = axios.get('/api/user')
 return {
     type: GET_USER,
     payload: user
@@ -44,6 +47,12 @@ export default function(state = initialState, action) {
         return {...state, ...action.payload}
         case REGISTER_USER: 
         return {...state, user: action.payload, isLoggedIn: true}
+        case GET_USER + '_PENDING':
+        return state
+        case GET_USER + '_FULFILLED':
+        return {...state, user: action.payload.data, isLoggedIn: true}
+        case GET_USER + '_REJECTED':
+            return initialState
         default:
         return initialState
     }
