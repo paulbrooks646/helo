@@ -42,7 +42,7 @@ class Auth extends Component {
             <div className="authbackground">
                 <div className="loginbox">
                     <div className="head">
-                        <div classname="eyes">
+                        <div className="eyes">
                             <div className="lefteye"></div>
                             <div className="righteye"></div>
                         </div>

@@ -40,11 +40,11 @@ width: 80px;
 }
 .lefteye {
   background-color: white;
-  width: 35px;
+  width: 30px;
   height: 10px;
   position: relative;
   top: 30px;
-  left: 8px
+  left: 10px
 
 }
 .righteye {
@@ -53,8 +53,8 @@ width: 80px;
   border: solid 10px white;
   border-radius: 50%;
   position: relative;
-  right: -50px;
-  top: 5px
+  right: -20px;
+  top: 15px
 }
 .smile {
   background-color: white;

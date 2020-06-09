@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {connect} from 'react-redux'
-import {getUser} from '../redux/reducer'
+
 
 class Dashboard extends Component {
     constructor() {
@@ -12,9 +12,9 @@ search: "",
 userposts: true
         }
     }
-    componentDidMount() {
-        this.props
-    }
+
+    
+    
 
     render() {
         return (
@@ -24,4 +24,4 @@ userposts: true
 }
 
 const mapStateToProps = reduxState => reduxState
-export default connect(mapStateToProps, {getUser})(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

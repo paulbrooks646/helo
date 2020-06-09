@@ -1,8 +1,9 @@
-import React, {Component} from "react"
+import React, {Component, useReducer} from "react"
 import {Link, withRouter} from 'react-router-dom'
 import { logoutUser } from "../../ducks/reducer"
 import axios from 'axios'
 import {connect} from "react-redux"
+import {getUser} from '../../ducks/reducer'
 
 
 
@@ -13,6 +14,9 @@ class Nav extends Component {
         this.state = {
 
         }
+    }
+    componentDidMount() {
+        this.props.getUser()
     }
 
    
@@ -35,8 +39,8 @@ class Nav extends Component {
             
                 <nav>
                     <div className="navbarmain">
-                        <img className="profilepic" src="https://robohash.org/4H1.png?set=set1&size=150x150" alt=""/>
-                        <h4>Profile Name</h4>
+                        <img className="profilepic" src={this.props.user.profile_pic} alt="Please Add Your Picture"/>
+                        <h4>{this.props.user.username}</h4>
                         <Link to="dashboard">
                             <button className="homebutton">Home</button>
                         </Link>
@@ -51,7 +55,7 @@ class Nav extends Component {
     }}}
     const mapStateToProps = reduxState => reduxState
 
-    export default withRouter(connect(mapStateToProps, {logoutUser})(Nav))
+    export default withRouter(connect(mapStateToProps, {logoutUser, getUser})(Nav))
 
 
 
