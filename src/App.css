@@ -136,4 +136,80 @@ nav {
   width: 80px;
   margin-top: 20px;
 }
+.searchlogo {
+  background: none;
 
+  width: 50px;
+}
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 650px;
+  height: 40px;
+  background-color: white;
+  border: solid 1px black;
+  margin-top: 20px;
+
+}
+.dashboard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchbarleft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchbarright {
+  display: flex;
+  align-items: center;
+}
+.searchinput {
+  width: 300px;
+  height: 15px;
+  margin-left: 15px;
+}
+.checkbox {
+  margin-right: 15px;
+}
+.myposts {
+  margin-right: 10px;
+}
+.postdisplay {
+  background-color: white;
+  width: 650px;
+  margin-top: 20px;
+  padding: 20px;
+
+}
+.postspic {
+  width: 50px;
+  margin-left: 10px;
+  
+}
+.postsdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px black;
+  margin-bottom: 10px;
+}
+.authordiv {
+  display: flex;
+  margin-right: 10px;
+}
+.picdiv {
+  margin-left: 10px;
+}
+h6 {
+  font-size: 10px;
+}
+.resetbutton {
+  color: white;
+  background-color: #403D39;
+}

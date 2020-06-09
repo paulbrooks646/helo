@@ -42,8 +42,11 @@ module.exports = {
                 res.status(403).send('Username or password incorrect!')
             }}
         },
-    retrievePosts: async (req, res) => {
+    retrievePosts: (req, res) => {
         const db = req.app.get('db')
+
+        db.get_posts()
+        .then( posts => res.status(200).send(posts))
     },
     retrievePost: async (req, res) => {
         const db = req.app.get('db')
