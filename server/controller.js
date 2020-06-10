@@ -45,7 +45,15 @@ module.exports = {
     retrievePosts: (req, res) => {
         const db = req.app.get('db')
 
+
         db.get_posts()
+        .then( posts => res.status(200).send(posts))
+    },
+    retrievePosts2: (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.params
+
+        db.get_posts2(id)
         .then( posts => res.status(200).send(posts))
     },
     retrievePost: async (req, res) => {

@@ -27,6 +27,7 @@ massive({
 app.post('/api/auth/register', ctrl.register)
 app.post('/api/auth/login', ctrl.login)
 app.get('/api/posts', ctrl.retrievePosts)
+app.get('/api/posts2/:id', ctrl.retrievePosts2)
 app.get('/api/post/:postid', ctrl.retrievePost)
 app.post('/api/post/:userid', ctrl.newPost)
 app.delete('/api/logout', ctrl.logout)
