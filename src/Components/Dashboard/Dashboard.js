@@ -14,7 +14,7 @@ search: "",
 userposts: true,
 filteredPosts: []
         }
-        this.getPosts = this.getPosts.bind(this)
+        
     }
 
     reset() {
@@ -43,7 +43,7 @@ filteredPosts: []
 componentDidMount() {
   this.getPosts()  
 } 
-getPosts() {
+getPosts(id) {
     if (this.state.userposts === true) {
     axios.get('/api/posts').then((res) => {
     this.setState({
@@ -51,9 +51,8 @@ getPosts() {
     })
 })}
     else {
-       
-    
-    axios.get('/api/post/{this.props.user.id}').then((res) => {
+         console.log(this.props.user.id)
+    axios.get(`/api/posts2/${this.props.user.id}`).then((res) => {
         this.setState({
             posts: res.data
         })
@@ -71,8 +70,7 @@ userfilter() {
     
 
     render() {
-        console.log(this.props.user.id)
-        const newArray = this.state.posts.map((e, index) => <div className="postsdiv" key={index}><div className="picdiv"><h2>{e.title}</h2></div><div className="authordiv"><h6>by {e.username}</h6><img className="postspic" src={e.profile_pic} alt="profile picture"/></div></div>)
+        const newArray = this.state.posts.map((e, index) => <div className="postsdiv" key={index}><div className="picdiv"><h2>{e.title}</h2></div><div className="authordiv"><h6>by {e.username}</h6><img className="postspic" src={e.profile_pic} alt="profile"/></div></div>)
         return (
             <div className="dashboard">
                 <div className="searchbar">
@@ -85,8 +83,7 @@ userfilter() {
                     </div>
                     <div className="searchbarright">
                         <h4 className="myposts">My Posts</h4>
-                        <input className="checkbox" type="checkbox" onClick={ () => this.userfilter()}
-                      />
+                        <input className="checkbox" type="checkbox" onClick={ () =>  this.userfilter()}/>
                     </div>                    
                 </div>
                 <div className="postdisplay"> 

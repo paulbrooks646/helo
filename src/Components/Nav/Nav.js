@@ -1,4 +1,4 @@
-import React, {Component, useReducer} from "react"
+import React, { Component } from "react"
 import {Link, withRouter} from 'react-router-dom'
 import { logoutUser } from "../../ducks/reducer"
 import axios from 'axios'
@@ -39,7 +39,7 @@ class Nav extends Component {
             
                 <nav>
                     <div className="navbarmain">
-                        <img className="profilepic" src={this.props.user.profile_pic} alt="Please Add Your Picture"/>
+                        <img className="profilepic" src={this.props.user.profile_pic} alt="Please Add Yours"/>
                         <h4>{this.props.user.username}</h4>
                         <Link to="dashboard">
                             <button className="homebutton">Home</button>
