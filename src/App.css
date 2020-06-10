@@ -213,3 +213,37 @@ h6 {
   color: white;
   background-color: #403D39;
 }
+.singleposttitle {
+  font-size: 25px;
+  color: #FF9770;
+}
+.postnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.postdivbox {
+  background-color: white;
+  width: 650px;
+  margin-top: 20px;
+  padding: 20px;
+  border: solid 1px black;
+  margin-left: 100px;
+}
+.singlepostimage{
+  width: 300px;
+}
+.mainpostdiv {
+  display: flex;
+  justify-content: center;
+}
+.postnavbarright {
+  display: flex;
+  align-items: center;
+}
+.postbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
