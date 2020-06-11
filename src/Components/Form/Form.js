@@ -22,7 +22,8 @@ changeContent(val) {
 }
 addPost(title, img, content) {
     const body = {title, img, content}
-    axios.post(`/api/${this.props.match.params.userid}`, body)
+    axios.post(`/api/post/${this.props.match.params.userid}`, body);
+    
 }
 
 
@@ -34,7 +35,7 @@ addPost(title, img, content) {
                     <h6 className="titlelabel">Title:</h6>
                     <input className="titleinput" value={this.state.title} onChange={e => this.changeTitle(e.target.value)}/>
                     <div className="imgslot">
-                        <img src={this.state.img} alt=""/>
+                        <img className="newpostimg" src={this.state.img} alt=""/>
                     </div>    
                     <h6 className="imglabel">Image URL:</h6>
                     <input className="imginput" value={this.state.img} onChange={e => this.changeImage(e.target.value)}/>
