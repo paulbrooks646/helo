@@ -44,7 +44,7 @@ class Nav extends Component {
                         <Link to="/dashboard">
                             <button className="homebutton">Home</button>
                         </Link>
-                        <Link to="/new">
+                        <Link to={`/new/${this.props.user.id}`}>
                             <button className="postbutton">New Post</button>
                         </Link>
                     </div>
